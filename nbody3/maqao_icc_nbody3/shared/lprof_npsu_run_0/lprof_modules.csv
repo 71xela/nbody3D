@@ -1,0 +1,4 @@
+name;time_p;time_s;cpi_ratio;
+/users/user2233/nbody3D/nbody3/maqao_icc_nbody3/binaries/icc_nbody3;98.73;1.56;;
+/usr/lib/x86_64-linux-gnu/libc-2.31.so;0.95;0.01;;
+/usr/lib/x86_64-linux-gnu/ld-2.31.so;0.32;0;;

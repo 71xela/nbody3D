@@ -1,0 +1,1 @@
+maqao oneview -R1 --executable=./gcc_nbody4 --run_command=<executable> -xp=maqao_gcc_nbody4 --uarch=KNIGHTS_LANDING 

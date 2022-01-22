@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="utf-8"?>
+<log version="1.0" tool="runtool">
+
+<msg id="1" tool="runtool">
+  <type>log-start</type>
+  <arg>2022/01/22 22:13:49</arg>
+</msg>
+<msg id="2" tool="runtool">
+  <type>bandwidth-measurement-starts</type>
+</msg>
+<msg id="3" tool="runtool">
+  <type>bandwidth-measurement-done</type>
+</msg>
+<msg id="4" tool="runtool">
+  <type>collector-starts</type>
+</msg>
+<msg id="5" tool="runtool">
+  <type>marker-file</type>
+  <arg>/users/user2233/nbody3D/nbody4/advi_icc/e000/trc000/trc000.advixe</arg>
+</msg>
+<msg id="6" tool="trc">
+  <type>PROCESS_START</type>
+  <arg>/users/user2233/nbody3D/nbody4/icc_nbody4</arg>
+  <arg>488814</arg>
+  <severity>INFO</severity>
+  <timestamp>Sat Jan 22 22:14:02 2022</timestamp>
+</msg>
+<msg id="7" tool="trc">
+  <type>PROCESS_ANALYSIS_MODE</type>
+  <arg>full</arg>
+  <severity>INFO</severity>
+  <timestamp>Sat Jan 22 22:14:02 2022</timestamp>
+</msg>
+<msg id="8" tool="trc">
+  <type>LOAD_MODULE</type>
+  <arg>/users/user2233/nbody3D/nbody4/icc_nbody4</arg>
+  <arg>0x400000</arg>
+  <arg>0x44ef67</arg>
+  <arg>yes</arg>
+  <severity>INFO</severity>
+  <timestamp>Sat Jan 22 22:14:02 2022</timestamp>
+</msg>
+<msg id="9" tool="trc">
+  <type>LOAD_MODULE</type>
+  <arg>/lib64/ld-linux-x86-64.so.2</arg>
+  <arg>0x7f3365f6e000</arg>
+  <arg>0x7f3365f9d18f</arg>
+  <arg>no</arg>
+  <severity>INFO</severity>
+  <timestamp>Sat Jan 22 22:14:03 2022</timestamp>
+</msg>
+<msg id="10" tool="trc">
+  <type>LOAD_MODULE</type>
+  <arg>[vdso]</arg>
+  <arg>0x7ffd565ec000</arg>
+  <arg>0x7ffd565eca3b</arg>
+  <arg>no</arg>
+  <severity>INFO</severity>
+  <timestamp>Sat Jan 22 22:14:03 2022</timestamp>
+</msg>
+<msg id="11" tool="trc">
+  <type>LOAD_MODULE</type>
+  <arg>/opt/intel/oneapi/mkl/2021.4.0/lib/intel64/libmkl_intel_lp64.so.1</arg>
+  <arg>0x7f334f344000</arg>
+  <arg>0x7f334fee23ff</arg>
+  <arg>yes</arg>
+  <severity>INFO</severity>
+  <timestamp>Sat Jan 22 22:14:04 2022</timestamp>
+</msg>
+<msg id="12" tool="trc">
+  <type>LOAD_MODULE</type>
+  <arg>/opt/intel/oneapi/mkl/2021.4.0/lib/intel64/libmkl_intel_thread.so.1</arg>
+  <arg>0x7f334bbc2000</arg>
+  <arg>0x7f334f310a3f</arg>
+  <arg>yes</arg>
+  <severity>INFO</severity>
+  <timestamp>Sat Jan 22 22:14:05 2022</timestamp>
+</msg>
+<msg id="13" tool="trc">
+  <type>LOAD_MODULE</type>
+  <arg>/opt/intel/oneapi/mkl/2021.4.0/lib/intel64/libmkl_core.so.1</arg>
+  <arg>0x7f3347754000</arg>
+  <arg>0x7f334bbc1b8f</arg>
+  <arg>yes</arg>
+  <severity>INFO</severity>
+  <timestamp>Sat Jan 22 22:14:06 2022</timestamp>
+</msg>
+<msg id="14" tool="trc">
+  <type>LOAD_MODULE</type>
+  <arg>/opt/intel/oneapi/compiler/2021.4.0/linux/compiler/lib/intel64_lin/libiomp5.so</arg>
+  <arg>0x7f33472f9000</arg>
+  <arg>0x7f334771807f</arg>
+  <arg>yes</arg>
+  <severity>INFO</severity>
+  <timestamp>Sat Jan 22 22:14:06 2022</timestamp>
+</msg>
+<msg id="15" tool="trc">
+  <type>LOAD_MODULE</type>
+  <arg>/lib/x86_64-linux-gnu/libm.so.6</arg>
+  <arg>0x7f334717d000</arg>
+  <arg>0x7f33472cb10f</arg>
+  <arg>no</arg>
+  <severity>INFO</severity>
+  <timestamp>Sat Jan 22 22:14:06 2022</timestamp>
+</msg>
+<msg id="16" tool="trc">
+  <type>LOAD_MODULE</type>
+  <arg>/lib/x86_64-linux-gnu/libgcc_s.so.1</arg>
+  <arg>0x7f3347162000</arg>
+  <arg>0x7f334717c447</arg>
+  <arg>no</arg>
+  <severity>INFO</severity>
+  <timestamp>Sat Jan 22 22:14:06 2022</timestamp>
+</msg>
+<msg id="17" tool="trc">
+  <type>LOAD_MODULE</type>
+  <arg>/lib/x86_64-linux-gnu/libpthread.so.0</arg>
+  <arg>0x7f334713e000</arg>
+  <arg>0x7f3347160477</arg>
+  <arg>yes</arg>
+  <severity>INFO</severity>
+  <timestamp>Sat Jan 22 22:14:06 2022</timestamp>
+</msg>
+<msg id="18" tool="trc">
+  <type>LOAD_MODULE</type>
+  <arg>/lib/x86_64-linux-gnu/libc.so.6</arg>
+  <arg>0x7f3346f41000</arg>
+  <arg>0x7f33471324d7</arg>
+  <arg>no</arg>
+  <severity>INFO</severity>
+  <timestamp>Sat Jan 22 22:14:06 2022</timestamp>
+</msg>
+<msg id="19" tool="trc">
+  <type>LOAD_MODULE</type>
+  <arg>/lib/x86_64-linux-gnu/libdl.so.2</arg>
+  <arg>0x7f3347136000</arg>
+  <arg>0x7f334713b10f</arg>
+  <arg>no</arg>
+  <severity>INFO</severity>
+  <timestamp>Sat Jan 22 22:14:09 2022</timestamp>
+</msg>
+<msg id="20" tool="trc">
+  <type>LOAD_MODULE</type>
+  <arg>/lib/x86_64-linux-gnu/librt.so.1</arg>
+  <arg>0x7f3346f25000</arg>
+  <arg>0x7f3346f2fbdf</arg>
+  <arg>no</arg>
+  <severity>INFO</severity>
+  <timestamp>Sat Jan 22 22:14:09 2022</timestamp>
+</msg>
+<msg id="21" tool="trc">
+  <type>UNLOAD_MODULE</type>
+  <arg>/users/user2233/nbody3D/nbody4/icc_nbody4</arg>
+  <severity>INFO</severity>
+  <timestamp>Sat Jan 22 22:14:20 2022</timestamp>
+</msg>
+<msg id="22" tool="trc">
+  <type>UNLOAD_MODULE</type>
+  <arg>/lib64/ld-linux-x86-64.so.2</arg>
+  <severity>INFO</severity>
+  <timestamp>Sat Jan 22 22:14:20 2022</timestamp>
+</msg>
+<msg id="23" tool="trc">
+  <type>UNLOAD_MODULE</type>
+  <arg>[vdso]</arg>
+  <severity>INFO</severity>
+  <timestamp>Sat Jan 22 22:14:20 2022</timestamp>
+</msg>
+<msg id="24" tool="trc">
+  <type>UNLOAD_MODULE</type>
+  <arg>/opt/intel/oneapi/mkl/2021.4.0/lib/intel64/libmkl_intel_lp64.so.1</arg>
+  <severity>INFO</severity>
+  <timestamp>Sat Jan 22 22:14:20 2022</timestamp>
+</msg>
+<msg id="25" tool="trc">
+  <type>UNLOAD_MODULE</type>
+  <arg>/opt/intel/oneapi/mkl/2021.4.0/lib/intel64/libmkl_intel_thread.so.1</arg>
+  <severity>INFO</severity>
+  <timestamp>Sat Jan 22 22:14:20 2022</timestamp>
+</msg>
+<msg id="26" tool="trc">
+  <type>UNLOAD_MODULE</type>
+  <arg>/opt/intel/oneapi/mkl/2021.4.0/lib/intel64/libmkl_core.so.1</arg>
+  <severity>INFO</severity>
+  <timestamp>Sat Jan 22 22:14:20 2022</timestamp>
+</msg>
+<msg id="27" tool="trc">
+  <type>UNLOAD_MODULE</type>
+  <arg>/opt/intel/oneapi/compiler/2021.4.0/linux/compiler/lib/intel64_lin/libiomp5.so</arg>
+  <severity>INFO</severity>
+  <timestamp>Sat Jan 22 22:14:20 2022</timestamp>
+</msg>
+<msg id="28" tool="trc">
+  <type>UNLOAD_MODULE</type>
+  <arg>/lib/x86_64-linux-gnu/libm.so.6</arg>
+  <severity>INFO</severity>
+  <timestamp>Sat Jan 22 22:14:20 2022</timestamp>
+</msg>
+<msg id="29" tool="trc">
+  <type>UNLOAD_MODULE</type>
+  <arg>/lib/x86_64-linux-gnu/libgcc_s.so.1</arg>
+  <severity>INFO</severity>
+  <timestamp>Sat Jan 22 22:14:20 2022</timestamp>
+</msg>
+<msg id="30" tool="trc">
+  <type>UNLOAD_MODULE</type>
+  <arg>/lib/x86_64-linux-gnu/libpthread.so.0</arg>
+  <severity>INFO</severity>
+  <timestamp>Sat Jan 22 22:14:20 2022</timestamp>
+</msg>
+<msg id="31" tool="trc">
+  <type>UNLOAD_MODULE</type>
+  <arg>/lib/x86_64-linux-gnu/libc.so.6</arg>
+  <severity>INFO</severity>
+  <timestamp>Sat Jan 22 22:14:20 2022</timestamp>
+</msg>
+<msg id="32" tool="trc">
+  <type>UNLOAD_MODULE</type>
+  <arg>/lib/x86_64-linux-gnu/libdl.so.2</arg>
+  <severity>INFO</severity>
+  <timestamp>Sat Jan 22 22:14:20 2022</timestamp>
+</msg>
+<msg id="33" tool="trc">
+  <type>UNLOAD_MODULE</type>
+  <arg>/lib/x86_64-linux-gnu/librt.so.1</arg>
+  <severity>INFO</severity>
+  <timestamp>Sat Jan 22 22:14:20 2022</timestamp>
+</msg>
+<msg id="34" tool="trc">
+  <type>PROCESS_FINISH</type>
+  <arg>/users/user2233/nbody3D/nbody4/icc_nbody4</arg>
+  <arg>488814</arg>
+  <arg>0x0</arg>
+  <severity>INFO</severity>
+  <timestamp>Sat Jan 22 22:14:20 2022</timestamp>
+</msg>
+<msg id="35" tool="runtool">
+  <type>app-exit-code</type>
+  <arg>0</arg>
+</msg>
+<msg id="36" tool="runtool">
+  <type>marker-file</type>
+  <arg>/users/user2233/nbody3D/nbody4/advi_icc/e000/trc000/trc000.advixe</arg>
+</msg>
+<msg id="37" tool="runtool">
+  <type>collector-done</type>
+</msg>
+<msg id="38" tool="runtool">
+  <type>log-end</type>
+  <arg>2022/01/22 22:14:24</arg>
+</msg>
+
+</log>
+

@@ -1,0 +1,133 @@
+/usr/include/stdlib.h: 375 - 375
+--------------------------------------------------------------------------------
+
+375:   return strtoll (__nptr, (char **) NULL, 10);
+/users/user2233/nbody3D/nbody4/nbody4.c: 23 - 157
+--------------------------------------------------------------------------------
+
+23:     p->x = aligned_alloc(ALIGN, sizeof(f32) * n); //
+24:     p->y = aligned_alloc(ALIGN, sizeof(f32) * n); //
+25:     p->z = aligned_alloc(ALIGN, sizeof(f32) * n); //
+26:     v->x = aligned_alloc(ALIGN, sizeof(f32) * n); //
+27:     v->y = aligned_alloc(ALIGN, sizeof(f32) * n); //
+28:     v->z = aligned_alloc(ALIGN, sizeof(f32) * n); //
+29:     
+30:     for (u64 i = 0; i < n; i++)
+31:     {
+32:         u64 r1 = (u64)rand();
+33:         u64 r2 = (u64)rand();
+34:         f32 sign = (r1 > r2) ? 1 : -1;
+35: 
+36:         p->x[i] = sign * (f32)rand() / (f32)RAND_MAX;
+37:         p->y[i] = (f32)rand() / (f32)RAND_MAX;
+38:         p->z[i] = sign * (f32)rand() / (f32)RAND_MAX;
+39: 
+40:         v->x[i] = (f32)rand() / (f32)RAND_MAX;
+41:         v->y[i] = sign * (f32)rand() / (f32)RAND_MAX;
+42:         v->z[i] = (f32)rand() / (f32)RAND_MAX;
+[...]
+53:     for (u64 i = 0; i < n; i++)
+54:     {
+55:         f32 fx = 0.0;
+56:         f32 fy = 0.0;
+57:         f32 fz = 0.0;
+58: 
+59:         //24 floating-point operations
+60:         for (u64 j = 0; j < n; j++)
+61:         {
+62:             //Newton's law
+63:             const f32 dx = p->x[j] - p->x[i]; //1
+64:             const f32 dy = p->y[j] - p->y[i]; //2
+65:             const f32 dz = p->z[j] - p->z[i]; //3
+66:             const f32 d_2 = (dx * dx) + (dy * dy) + (dz * dz) + softening; //9
+67:             f32 d_3_over_2 = 1 / sqrtf(d_2); //10
+68:             d_3_over_2 = d_3_over_2 * d_3_over_2 * d_3_over_2; //12
+69: 
+70:             //Net force
+71:             fx += dx * d_3_over_2; //14
+72:             fy += dy * d_3_over_2; //16
+73:             fz += dz * d_3_over_2; //18
+74:         }
+75: 
+76:         v->x[i] += dt * fx; //20
+77:         v->y[i] += dt * fy; //22
+78:         v->z[i] += dt * fz; //24
+79:     }
+80: 
+81:         //3 floating-point operations
+82:     for (u64 i = 0; i < n; i++)
+83:     {
+84:         p->x[i] += dt * v->x[i];
+85:         p->y[i] += dt * v->y[i];
+86:         p->z[i] += dt * v->z[i];
+87:     }
+88: }
+89: 
+90: int main(int argc, char **argv)
+91: {
+92:     particle_t p, v;
+93: 
+94:     const u64 n = (argc > 1) ? atoll(argv[1]) : 16384;
+95:     const u64 steps= 10;
+96:     const f32 dt = 0.01;
+97:     const f32 nbflop = 24.0; //
+98: 
+99:     f64 rate = 0.0, drate = 0.0;
+100: 
+101:     //Steps to skip for warm up
+102:     const u64 warmup = 3;
+103: 
+104:     init(&p, &v, n);
+105: 
+106:     const u64 s = sizeof(f32) * n * 6;
+107: 
+108:     printf("\n\033[1mTotal memory size:\033[0m %llu B, %llu KiB, %llu MiB\n\n", s, s >> 10, s >> 20);
+109:     printf("\033[1m%5s %10s %10s %8s\033[0m\n", "Step", "Time, s", "Interact/s", "GFLOP/s"); fflush(stdout);
+110: 
+111:     for (u64 i = 0; i < steps; i++)
+112:     {
+113:         //Measure
+114:         const f64 start = omp_get_wtime();
+115: 
+116:         move_particles(&p, &v, dt, n);
+117: 
+118:         const f64 end = omp_get_wtime();
+119: 
+120:         //Number of interactions/iterations
+121:         const f32 h1 = (f32)(n) * (f32)(n - 1);
+122: 
+123:         //GFLOPS
+124:         const f32 h2 = (nbflop * h1 + 3.0 * (f32)n) * 1e-9;
+125: 
+126:         if (i >= warmup)
+127:         {
+128:             rate += h2 / (end - start);
+129:             drate += (h2 * h2) / ((end - start) * (end - start));
+130:         }
+131: 
+132:         printf("%5llu %10.3e %10.3e %8.2f %s\n",
+133:         i,
+134:         (end - start),
+135:         h1 / (end - start),
+136:         h2 / (end - start),
+137:         (i < warmup) ? "*" : "");
+138: 
+139:         fflush(stdout);
+140:     }
+141: 
+142:     rate /= (f64)(steps - warmup);
+143:     drate = sqrt(drate / (f64)(steps - warmup) - (rate * rate));
+144: 
+145:     printf("-----------------------------------------------------\n");
+146:     printf("\033[1m%s %4s \033[42m%10.2lf +- %.2lf GFLOP/s\033[0m\n",
+147:     "Average performance:", "", rate, drate);
+148:     printf("-----------------------------------------------------\n");
+149: 
+150:     free(p.x);
+151:     free(p.y);
+152:     free(p.z);
+153:     free(v.x);
+154:     free(v.y);
+155:     free(v.z);
+156: 
+157:     return 0;

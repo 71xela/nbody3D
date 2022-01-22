@@ -1,0 +1,20 @@
+address;source_location;insn;indent
+0x18a0;/users/user2233/nbody3D/nbody3/nbody3.c:63;VMOVAPS	(%R13,%RCX,1),%ZMM1;
+0x18a8;/users/user2233/nbody3D/nbody3/nbody3.c:63;VSUBPS	%ZMM25,%ZMM1,%ZMM22;
+0x18ae;/users/user2233/nbody3D/nbody3/nbody3.c:64;VMOVUPS	(%R12,%RCX,1),%ZMM1;
+0x18b5;/users/user2233/nbody3D/nbody3/nbody3.c:64;VSUBPS	%ZMM24,%ZMM1,%ZMM21;
+0x18bb;/users/user2233/nbody3D/nbody3/nbody3.c:65;VMOVUPS	(%R11,%RCX,1),%ZMM1;
+0x18c2;/users/user2233/nbody3D/nbody3/nbody3.c:65;VSUBPS	%ZMM23,%ZMM1,%ZMM19;
+0x18c8;/users/user2233/nbody3D/nbody3/nbody3.c:66;LEA	0x40(%RCX),%RCX;
+0x18cc;/users/user2233/nbody3D/nbody3/nbody3.c:66;CMP	%RBX,%RCX;
+0x18cf;/users/user2233/nbody3D/nbody3/nbody3.c:66;VMULPS	%ZMM21,%ZMM21,%ZMM1;
+0x18d5;/users/user2233/nbody3D/nbody3/nbody3.c:66;VFMADD231PS	%ZMM22,%ZMM22,%ZMM1;
+0x18db;/users/user2233/nbody3D/nbody3/nbody3.c:66;VADDPS	%ZMM14,%ZMM1,%ZMM1;
+0x18e1;/users/user2233/nbody3D/nbody3/nbody3.c:66;VFMADD231PS	%ZMM19,%ZMM19,%ZMM1;
+0x18e7;/users/user2233/nbody3D/nbody3/nbody3.c:67;VRSQRT28PS	%ZMM1,%ZMM1;
+0x18ed;/users/user2233/nbody3D/nbody3/nbody3.c:68;VMULPS	%ZMM1,%ZMM1,%ZMM20;
+0x18f3;/users/user2233/nbody3D/nbody3/nbody3.c:68;VMULPS	%ZMM1,%ZMM20,%ZMM1;
+0x18f9;/users/user2233/nbody3D/nbody3/nbody3.c:71;VFMADD231PS	%ZMM1,%ZMM22,%ZMM6;
+0x18ff;/users/user2233/nbody3D/nbody3/nbody3.c:72;VFMADD231PS	%ZMM21,%ZMM1,%ZMM7;
+0x1905;/users/user2233/nbody3D/nbody3/nbody3.c:73;VFMADD231PS	%ZMM19,%ZMM1,%ZMM2;
+0x190b;/users/user2233/nbody3D/nbody3/nbody3.c:60;JNE	18a0 <move_particles+0x1c0>;

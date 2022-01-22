@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- <!DOCTYPE IntelParallelAdvisorSummaryCollection SYSTEM  "IntelParallelAdvisorSummaryCollection.dtd"> -->
+
+<IntelParallelAdvisorSummary version="" 
+                             kind="DATAKIND_SURVEY_EX" >
+  <hotspot filename="/users/user2233/nbody3D/nbody4/nbody4.c"
+           line_no="60"
+           routine="move_particles"
+           is_vectorized="1"
+           self_time="1.519926E+00"
+           total_time="1.519926E+00"
+           trip_counts="1024"
+           func_instance="22"
+           confidence="1"
+           efficiency="1.724639E+02"
+           referenceEfficiency="6.250000E+00"
+           priority="0"/>
+  <hotspot filename="/users/user2233/nbody3D/nbody4/nbody4.c"
+           line_no="82"
+           routine="move_particles"
+           is_vectorized="1"
+           self_time="8.001588E-03"
+           total_time="8.001588E-03"
+           trip_counts="512"
+           func_instance="23"
+           confidence="1"
+           efficiency="9.449831E+01"
+           referenceEfficiency="3.125000E+00"
+           priority="0"/>
+  <hotspot filename="/users/user2233/nbody3D/nbody4/nbody4.c"
+           line_no="53"
+           routine="main"
+           is_vectorized="0"
+           self_time="0.000000E+00"
+           total_time="1.539930E+00"
+           trip_counts="8192"
+           func_instance="12"
+           priority="0"/>
+  <hotspot filename="/users/user2233/nbody3D/nbody4/nbody4.c"
+           line_no="111"
+           routine="main"
+           is_vectorized="0"
+           self_time="0.000000E+00"
+           total_time="1.547931E+00"
+           trip_counts="10"
+           func_instance="13"
+           priority="0"/>
+  <hotspot filename="/users/user2233/nbody3D/nbody4/nbody4.c"
+           line_no="30"
+           routine="init"
+           is_vectorized="0"
+           self_time="0.000000E+00"
+           total_time="1.206862E-02"
+           trip_counts="16384"
+           func_instance="6"
+           priority="0"/>
+</IntelParallelAdvisorSummary >

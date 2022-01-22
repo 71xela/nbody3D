@@ -1,0 +1,11 @@
+-r
+/users/user2233/nbody3D/nbody4/advi_gcc/e000/mp000
+-quiet
+-zca
+/users/user2233/nbody3D/nbody4/advi_gcc/e000/loop_annotations.def
+--tool=map
+--record-stack-frame
+--sample-size=300000
+--record-mem-allocations
+--
+./gcc_nbody4

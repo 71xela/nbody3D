@@ -1,0 +1,16 @@
+/users/user2233/nbody3D/nbody4/nbody4.c: 30 - 42
+--------------------------------------------------------------------------------
+
+30:     for (u64 i = 0; i < n; i++)
+31:     {
+32:         u64 r1 = (u64)rand();
+33:         u64 r2 = (u64)rand();
+34:         f32 sign = (r1 > r2) ? 1 : -1;
+35: 
+36:         p->x[i] = sign * (f32)rand() / (f32)RAND_MAX;
+37:         p->y[i] = (f32)rand() / (f32)RAND_MAX;
+38:         p->z[i] = sign * (f32)rand() / (f32)RAND_MAX;
+39: 
+40:         v->x[i] = (f32)rand() / (f32)RAND_MAX;
+41:         v->y[i] = sign * (f32)rand() / (f32)RAND_MAX;
+42:         v->z[i] = (f32)rand() / (f32)RAND_MAX;

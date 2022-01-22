@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- <!DOCTYPE IntelParallelAdvisorSummaryCollection SYSTEM  "IntelParallelAdvisorSummaryCollection.dtd"> -->
+
+<IntelParallelAdvisorSummary version="" 
+                             kind="DATAKIND_SURVEY_EX" >
+  <hotspot filename="/users/user2233/nbody3D/nbody4/nbody4.c"
+           line_no="111"
+           routine="main"
+           is_vectorized="0"
+           self_time="0.000000E+00"
+           total_time="1.790000E+00"
+           trip_counts="10"
+           func_instance="2"
+           priority="0"/>
+  <hotspot filename="/users/user2233/nbody3D/nbody4/nbody4.c"
+           line_no="53"
+           routine="move_particles"
+           is_vectorized="0"
+           self_time="7.991503E-03"
+           total_time="1.790000E+00"
+           trip_counts="16384"
+           func_instance="6"
+           priority="0"/>
+  <hotspot filename="/users/user2233/nbody3D/nbody4/nbody4.c"
+           line_no="60"
+           routine="move_particles"
+           is_vectorized="1"
+           self_time="1.782008E+00"
+           total_time="1.782008E+00"
+           trip_counts="255"
+           func_instance="4"
+           priority="0"/>
+</IntelParallelAdvisorSummary >

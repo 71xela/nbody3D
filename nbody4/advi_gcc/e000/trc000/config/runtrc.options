@@ -1,0 +1,13 @@
+-r
+/users/user2233/nbody3D/nbody4/advi_gcc/e000/trc000
+-quiet
+-cs-file
+/users/user2233/nbody3D/nbody4/advi_gcc/e000/callstacks.def
+--cs-mode=count-loops,count-flops,stl-profiling,stack-stitching
+--count-flops
+--benchmarks=dram,mcdram,cpu_cache,flop_peak,int
+--jit-profiling
+--gpu-carm
+--target-gpu=none
+--
+./gcc_nbody4

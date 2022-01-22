@@ -1,0 +1,41 @@
+/users/user2233/nbody3D/nbody3/nbody3.c: 47 - 88
+--------------------------------------------------------------------------------
+
+47: {
+[...]
+53:     for (u64 i = 0; i < n; i++)
+54:     {
+55:         f32 fx = 0.0;
+56:         f32 fy = 0.0;
+57:         f32 fz = 0.0;
+58: 
+59:         //24 floating-point operations
+60:         for (u64 j = 0; j < n; j++)
+61:         {
+62:             //Newton's law
+63:             const f32 dx = p->x[j] - p->x[i]; //1
+64:             const f32 dy = p->y[j] - p->y[i]; //2
+65:             const f32 dz = p->z[j] - p->z[i]; //3
+66:             const f32 d_2 = (dx * dx) + (dy * dy) + (dz * dz) + softening; //9
+67:             f32 d_3_over_2 = 1 / sqrtf(d_2); //10
+68:             d_3_over_2 = d_3_over_2 * d_3_over_2 * d_3_over_2; //12
+69: 
+70:             //Net force
+71:             fx += dx * d_3_over_2; //14
+72:             fy += dy * d_3_over_2; //16
+73:             fz += dz * d_3_over_2; //18
+74:         }
+75: 
+76:         v->x[i] += dt * fx; //20
+77:         v->y[i] += dt * fy; //22
+78:         v->z[i] += dt * fz; //24
+79:     }
+80: 
+81:         //3 floating-point operations
+82:     for (u64 i = 0; i < n; i++)
+83:     {
+84:         p->x[i] += dt * v->x[i];
+85:         p->y[i] += dt * v->y[i];
+86:         p->z[i] += dt * v->z[i];
+87:     }
+88: }

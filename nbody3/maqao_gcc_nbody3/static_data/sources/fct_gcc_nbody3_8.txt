@@ -1,0 +1,26 @@
+/users/user2233/nbody3D/nbody3/nbody3.c: 22 - 44
+--------------------------------------------------------------------------------
+
+22: {
+23:     p->x = aligned_alloc(ALIGN, sizeof(f32) * n);
+24:     p->y = aligned_alloc(ALIGN, sizeof(f32) * n);
+25:     p->z = aligned_alloc(ALIGN, sizeof(f32) * n);
+26:     v->x = aligned_alloc(ALIGN, sizeof(f32) * n);
+27:     v->y = aligned_alloc(ALIGN, sizeof(f32) * n);
+28:     v->z = aligned_alloc(ALIGN, sizeof(f32) * n);
+29:     
+30:     for (u64 i = 0; i < n; i++)
+31:     {
+32:         u64 r1 = (u64)rand();
+33:         u64 r2 = (u64)rand();
+34:         f32 sign = (r1 > r2) ? 1 : -1;
+35: 
+36:         p->x[i] = sign * (f32)rand() / (f32)RAND_MAX;
+37:         p->y[i] = (f32)rand() / (f32)RAND_MAX;
+38:         p->z[i] = sign * (f32)rand() / (f32)RAND_MAX;
+39: 
+40:         v->x[i] = (f32)rand() / (f32)RAND_MAX;
+41:         v->y[i] = sign * (f32)rand() / (f32)RAND_MAX;
+42:         v->z[i] = (f32)rand() / (f32)RAND_MAX;
+43:     }
+44: }
